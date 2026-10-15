@@ -8,15 +8,15 @@ I turn manual work into systems that run on their own: data pipelines, integrati
 
 | Project | What it does | Numbers |
 |---|---|---|
-| **Job-search operator** | Node.js + SQLite in Docker. Collectors run every 6 hours, an LLM scores each post, every model output is validated against a schema (retries, caching, monthly budget cap, dead-letter queue), deterministic guards block unsupported claims in generated CVs, and an IMAP checker classifies employer replies. Nothing is sent without approval. | Runs unattended |
-| **Automated short-video factory** | Full podcast episodes → vertical clips: Whisper transcription, LLM segment selection with fixed rules on top, captions that never cover faces, branding and scheduling. | 122 shorts produced, 48 published, ~US$0.04 of AI cost per short |
+| **[Job-search operator](https://github.com/Jheremyt96/job-search-operator)** | Node.js + SQLite in Docker. Collectors run every 6 hours, an LLM scores each post, every model output is validated against a schema (retries, caching, monthly budget cap, dead-letter queue), deterministic guards block unsupported claims in generated CVs, and an IMAP checker classifies employer replies. Nothing is sent without approval. | Runs unattended |
+| **[Automated short-video factory](https://github.com/Jheremyt96/podcast-shorts-factory)** | Full podcast episodes → vertical clips: Whisper transcription, LLM segment selection with fixed rules on top, captions that never cover faces, branding and scheduling. | 122 shorts produced, 48 published, ~US$0.04 of AI cost per short |
 | **Video podcast editing workflow** | Redesigned a one-editor process into AI first pass → editor → quality control. | ~5 days → ~5 hours per episode |
 | **Multi-tenant WhatsApp AI assistant** | Evolution API → intent classification → DeepSeek → reply, with PostgreSQL as the source of truth and a human handoff. A new business is added by configuration only. | Several small businesses on one service |
-| **Multi-machine automation platform** | Three always-on machines (Ubuntu mini PC, Mac M4, 10 TB server) on Tailscale. A job router sends each heavy task to the best machine by type and load; systemd services, memory and disk guards, nightly backups and a live dashboard of every AI session and long job. | 3 machines, 24/7 |
-| **Live-concert audio restoration** (Áncora Tenores) | Batch pipeline: source separation (Mel-Band and BS-RoFormer), noise reduction, natural pitch correction and loudness, iterated through A/B reviews until approved. | 21 songs |
+| **[Multi-machine automation platform](https://github.com/Jheremyt96/multi-machine-ai-workshop)** | Three always-on machines (Ubuntu mini PC, Mac M4, 10 TB server) on Tailscale. A job router sends each heavy task to the best machine by type and load; systemd services, memory and disk guards, nightly backups and a live dashboard of every AI session and long job. | 3 machines, 24/7 |
+| **[Live-concert audio restoration](https://github.com/Jheremyt96/live-concert-audio-restoration)** (Áncora Tenores) | Batch pipeline: source separation (Mel-Band and BS-RoFormer), noise reduction, natural pitch correction and loudness, iterated through A/B reviews until approved. | 21 songs |
 | **Social publishing pipeline** | Self-hosted Postiz + PostgreSQL: posts are generated, approved on a web page and published to Facebook and Instagram automatically. | — |
 
-Most of this runs on my own private infrastructure; cleaned-up public versions are on the way.
+Each linked project has an overview with an architecture diagram and results. The code runs on my own private infrastructure; I am happy to walk through it on a call.
 
 ### Tools
 
